@@ -1,0 +1,41 @@
+一、文件说明：
+1、文件夹：
+原始数据      文件夹，官方数据
+三辆车预处理后的运动学片段数据表.csv   运行代码main.py生成的预处理后的数据
+三辆车运动学片段数检测结果表.csv    运行代码main.py后，生成的检测结果数据
+三辆车运动学片段特征参数表.csv    运行代码main.py后，生成的片段特征数据
+
+topics文件夹，包含以下图片：
+聚类结果示意图.png     运行代码compute_features.py后，生成的图片
+拥堵类能耗分布图.png     运行代码compute_features.py后，生成的图片
+一般类能耗分布图.png     运行代码compute_features.py后，生成的图片
+通畅类能耗分布图.png     运行代码compute_features.py后，生成的图片
+拥堵类行驶工况曲线.png      运行代码compute_features.py后，生成的图片
+一般类行驶工况曲线.png      运行代码compute_features.py后，生成的图片
+通畅类行驶工况曲线.png      运行代码compute_features.py后，生成的图片
+轻型汽车行驶工况曲线.png      运行代码compute_features.py后，生成的图片
+
+
+2、代码：
+
+utils.py    py脚本文件，定义了运动学片段检测函数_detecting,
+            运动学片段特征提取函数_create_feature,
+            经纬度计算距离函数dist,
+            主成分分析降维函数pca,
+            以及画图函数plotBestFit
+
+main.py     py脚本文件，程序入口，代码从该文件开始执行。代码大致流程：1）读入数据；
+            2）检测运动学片段；3）运动学片段特征提取；4）运动学片段筛选；5）保存数据
+            
+compute_features.py    1）pca降维；2）k-mean聚类；3）计算每类特征，以及能耗，4）计算E-MAE；
+            5）误差比较
+二、环境说明：
+1、Windows版本：Windows10 64位
+2、开发环境：Spyder
+软件库以及版本：
+python3.7   spyder3.3.6
+pandas 0.24.0      numpy 1.16.4
+
+三、代码运行顺序：
+utils.py ------> main.py --------> compute_features.py 
+
