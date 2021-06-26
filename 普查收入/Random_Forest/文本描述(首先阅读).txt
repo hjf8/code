@@ -1,4 +1,0 @@
-文件：excel_change实现数据预处理；
-          Matlab_xlr实现调用matlab自带分类器选取效果最优的分类器；
-          Random Forest为python编写的随机森林算法；
-          RF_sklearn为调用sklearn中自带的随机森林算法；
